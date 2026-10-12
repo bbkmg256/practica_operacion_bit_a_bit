@@ -63,14 +63,12 @@ def decifrar(clave, dato):
 
     # Empaquetado de los nibbles en bytes
     b_arr = bytearray()
-    contador = 1 # Para saltear un indice en el arreglo
     for i in range(0, len(arreglo_enteros)-1, 2):
         # Corrimiento de 4 bits a la derecha, mas empaquetado de los bits siguientes
         b_arr.append(arreglo_enteros[i] << 4 | arreglo_enteros[i+1])
         #print(f"[{arreglo_enteros[i]} {arreglo_enteros[i+1]}] - {b_arr.hex()}")
         #print(i)
         #time.sleep(2)
-        continue
 
     # print(b_arr.hex())
     # xor inverso
